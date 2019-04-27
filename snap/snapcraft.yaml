@@ -1,0 +1,44 @@
+
+name: puddletag
+version: git
+summary: puddletag is an audio tag editor
+description: |
+    puddletag is an audio tag editor (primarily created) for GNU/Linux similar to the Windows program, Mp3tag. Unlike most taggers for GNU/Linux, it uses a spreadsheet-like layout so that all the tags you want to edit by hand are visible and easily editable.
+grade: stable
+confinement: strict
+
+apps:
+  puddletag:
+    command: $SNAP/puddletag
+    plugs:
+      - network
+      - home
+      - network-bind
+
+parts:
+  puddletag:
+    source: https://github.com/kz6fittycent/puddletag
+    source-type: git
+    plugin: python
+    python-version: python2
+    after: [desktop-qt4]
+
+    build-packages:
+      - python
+      - python-mutagen
+      - python-pyparsing
+      - libchromaprint1
+      - python-qt4
+      - python-configobj
+      - python-musicbrainz2
+      - python-imaging
+      
+    stage-packages:
+      - python
+      - python-mutagen
+      - python-pyparsing
+      - libchromaprint1
+      - python-qt4
+      - python-configobj
+      - python-musicbrainz2
+      - python-imaging
