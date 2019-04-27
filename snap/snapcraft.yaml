@@ -27,7 +27,7 @@ parts:
       - python
       - python-mutagen
       - python-pyparsing
-      - libchromaprint1
+      - libchromaprint0
       - python-qt4
       - python-configobj
       - python-musicbrainz2
@@ -37,7 +37,7 @@ parts:
       - python
       - python-mutagen
       - python-pyparsing
-      - libchromaprint1
+      - libchromaprint0
       - python-qt4
       - python-configobj
       - python-musicbrainz2
